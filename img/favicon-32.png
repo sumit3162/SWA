@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Placeholder: SVG content saved with .png extension for quick fallback. Replace with real PNG export when available. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
+  <rect width="256" height="256" rx="24" fill="#071026" />
+  <g transform="translate(20,20) scale(0.125)">
+    <polygon points="64,-58 148,-10 148,86 64,134 -20,86 -20,-10" fill="none" stroke="#0B2B59" stroke-width="8" stroke-linejoin="round" transform="translate(104,104)"/>
+    <path d="M80 116 L110 116 L122 68 L144 150 L160 92 L200 116" fill="none" stroke="#28E3DE" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,-20)" />
+  </g>
+</svg>

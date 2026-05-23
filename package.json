@@ -1,0 +1,12 @@
+{
+  "name": "swa-site-utils",
+  "version": "1.0.0",
+  "description": "Utility scripts for the SWA site (favicon export)",
+  "private": true,
+  "scripts": {
+    "favicons": "node scripts/convert-favicons.js"
+  },
+  "dependencies": {
+    "sharp": "^0.32.4"
+  }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SWA logo">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#28E3DE"/>
+      <stop offset="1" stop-color="#0B5A9A"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0FAF5F"/>
+      <stop offset="1" stop-color="#0E7A50"/>
+    </linearGradient>
+  </defs>
+  <!-- hexagon -->
+  <g transform="translate(512,320)">
+    <polygon points="0,-220 190,-110 190,110 0,220 -190,110 -190,-110" fill="none" stroke="#0B2B59" stroke-width="36" stroke-linejoin="round"/>
+  </g>
+  <!-- ECG wave -->
+  <path d="M260 480 L340 480 L370 360 L420 600 L460 420 L540 480" fill="none" stroke="url(#g1)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,-60)" />
+  <!-- signal arcs -->
+  <g transform="translate(520,420)">
+    <path d="M0 0 C20 -20 40 -40 60 0" fill="none" stroke="url(#g2)" stroke-width="28" stroke-linecap="round"/>
+    <path d="M18 0 C38 -22 66 -48 90 0" fill="none" stroke="url(#g2)" stroke-width="20" stroke-linecap="round" opacity="0.9"/>
+  </g>
+  <!-- text -->
+  <text x="512" y="840" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="120" fill="#0B2B59">SWA</text>
+  <text x="512" y="900" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="36" fill="#2A466D">Medical IoT Solutions</text>
+</svg>

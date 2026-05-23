@@ -1,0 +1,11 @@
+{
+  "name": "SWA — Smart Ward Assistant",
+  "short_name": "SWA",
+  "icons": [
+    { "src": "img/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#071026",
+  "background_color": "#071026"
+}

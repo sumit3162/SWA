@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Featured project — Smart Ward Assistant (SWA), affordable Edge-AI monitoring for rural healthcare." />
+    <title>Featured Project — SWA</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <img class="site-logo" src="img/swa-logo.svg" alt="SWA logo" />
+          <div class="brand-text">
+            <strong>SWA</strong>
+            <small>Smart Ward Assistant</small>
+          </div>
+        </a>
+        <nav class="nav">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Featured Project</p>
+            <h1>Smart Ward Assistant</h1>
+            <p class="section-lead">Transforming rural healthcare with affordable Edge-AI monitoring.</p>
+          </div>
+
+          <article class="card story-card">
+            <h2>Overview</h2>
+            <p>The Smart Ward Assistant is an innovative healthcare technology project designed to improve patient safety and emergency response in rural hospitals and Primary Health Centers (PHCs). The system was created with one clear mission: to make smart healthcare affordable, accessible, and reliable for villages and low-resource medical environments.</p>
+            <p>This project combines IoT, Edge-AI, Embedded Systems, and Wireless Communication technologies to continuously monitor patients in real time without depending on expensive ICU infrastructure or stable internet connectivity.</p>
+
+            <h2>The Inspiration Behind the Project</h2>
+            <p>The idea for the Smart Ward Assistant was born from real experiences in rural Maharashtra. I observed how rural hospitals struggle daily with limited staff, lack of equipment, and delayed emergency response.</p>
+            <p>In many rural hospitals, a single nurse manages an entire ward of patients. During emergencies, the nurse may be handling injections, medicines, labor room cases, or other critical tasks simultaneously. Because there are no continuous monitoring systems, patients are checked manually after long intervals.</p>
+            <p>One incident deeply inspired this project. A patient admitted with breathing complications was resting in a ward late at night. Slowly, the patient’s oxygen level started dropping. However, there was no smart monitoring device to alert the staff. At the same time, the nurse was occupied handling another emergency case.</p>
+            <p>The patient could not call for help. There was no alarm. No monitoring system. No real-time alert. By the time the patient’s condition was noticed, the situation had already become serious.</p>
+            <p>That moment revealed the harsh reality of rural healthcare: the issue was not lack of care from nurses or doctors. The issue was the absence of affordable monitoring technology.</p>
+
+            <h2>Problem Statement</h2>
+            <ul>
+              <li>High cost of ICU monitoring systems</li>
+              <li>Limited availability of doctors and nurses</li>
+              <li>Poor internet connectivity</li>
+              <li>Frequent power interruptions</li>
+              <li>Delayed emergency detection</li>
+              <li>Lack of continuous patient monitoring</li>
+            </ul>
+            <p>Traditional ICU monitors are expensive and often cost between ₹1 lakh and ₹3 lakh per unit, making them impossible for small hospitals to deploy at scale. As a result, many patients remain unmonitored between manual checkups, increasing the risk of unnoticed emergencies.</p>
+
+            <h2>Our Solution</h2>
+            <p>The Smart Ward Assistant is a low-cost, internet-independent patient monitoring system that continuously tracks vital health parameters such as heart rate and oxygen saturation (SpO₂). The system uses wearable sensor nodes connected wirelessly to an intelligent Edge-AI processing hub.</p>
+            <p>Unlike traditional cloud-based systems, the Smart Ward Assistant works completely offline using ESP-NOW wireless communication technology. This makes it ideal for villages and hospitals with unstable internet connectivity.</p>
+            <p>Example alert: <strong>“Emergency detected on Bed Number 4.”</strong></p>
+
+            <h2>Key Features</h2>
+            <ul>
+              <li>Real-time patient monitoring</li>
+              <li>Offline operation</li>
+              <li>Smart voice alerts</li>
+              <li>Edge-AI risk detection</li>
+              <li>Wireless wearable devices</li>
+              <li>Multi-patient support</li>
+              <li>Low cost deployment under ₹10,000</li>
+            </ul>
+
+            <h2>Technologies Used</h2>
+            <ul>
+              <li>ESP32-WROOM-32</li>
+              <li>ESP32-S3-BOX-3</li>
+              <li>MAX30102 / MAXREFDES117 Sensor</li>
+              <li>Li-Po Battery</li>
+              <li>TP4056 Charging Module</li>
+              <li>ESP-NOW</li>
+              <li>FreeRTOS</li>
+              <li>MQTT</li>
+              <li>Edge-AI Algorithms</li>
+              <li>Web Dashboard</li>
+              <li>Voice Synthesis System</li>
+            </ul>
+
+            <h2>System Architecture</h2>
+            <ol>
+              <li>Wearable sensor captures patient vitals</li>
+              <li>ESP32 processes physiological signals</li>
+              <li>Data transmitted wirelessly via ESP-NOW</li>
+              <li>Edge-AI hub analyzes risk conditions</li>
+              <li>Voice alert generated during emergency</li>
+              <li>Dashboard displays patient information for doctors and nurses</li>
+            </ol>
+            <p>This architecture ensures low latency, high reliability, and complete offline functionality.</p>
+
+            <h2>Advantages Over Traditional ICU Systems</h2>
+            <div class="compare-table-wrapper">
+              <table class="compare-table">
+                <thead>
+                  <tr><th>Feature</th><th>Traditional ICU Monitor</th><th>Smart Ward Assistant</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Cost</td><td>₹1.5–3 Lakh</td><td>Under ₹10,000</td></tr>
+                  <tr><td>Internet Requirement</td><td>Required</td><td>Not Required</td></tr>
+                  <tr><td>Setup Complexity</td><td>High</td><td>Simple</td></tr>
+                  <tr><td>Portability</td><td>Fixed</td><td>Wireless &amp; Portable</td></tr>
+                  <tr><td>Emergency Alerts</td><td>Basic Beeps</td><td>Smart Voice Alerts</td></tr>
+                  <tr><td>Rural Suitability</td><td>Limited</td><td>Designed for Rural Use</td></tr>
+                  <tr><td>Power Consumption</td><td>High</td><td>Low Power</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2>Performance Results</h2>
+            <ul>
+              <li>96% Monitoring Accuracy</li>
+              <li>Less than 1.5 Second Alert Latency</li>
+              <li>98% Network Reliability</li>
+              <li>24+ Hour Battery Backup</li>
+            </ul>
+
+            <h2>Real-World Applications</h2>
+            <ul>
+              <li>Rural Hospitals</li>
+              <li>Primary Health Centers (PHCs)</li>
+              <li>Emergency Wards</li>
+              <li>Elderly Patient Care</li>
+              <li>Home Healthcare</li>
+              <li>Health Camps</li>
+              <li>Disaster Relief Camps</li>
+              <li>Temporary Medical Facilities</li>
+            </ul>
+
+            <h2>Future Scope</h2>
+            <ul>
+              <li>ECG Monitoring</li>
+              <li>Body Temperature Monitoring</li>
+              <li>Blood Pressure Tracking</li>
+              <li>AI-Based Predictive Healthcare</li>
+              <li>TinyML Integration</li>
+              <li>Solar-Powered Wearable Nodes</li>
+              <li>Advanced Doctor Dashboard</li>
+            </ul>
+
+            <h2>Mission & Vision</h2>
+            <p>Our mission is to bridge the healthcare gap between urban and rural India through affordable healthcare innovation.</p>
+            <p><strong>Every patient deserves timely care. Every nurse deserves technological support. Every rural hospital deserves smart healthcare tools.</strong></p>
+
+            <h2>Conclusion</h2>
+            <p>The Smart Ward Assistant demonstrates how IoT and Edge-AI can transform rural healthcare systems without requiring expensive infrastructure or constant internet connectivity. By combining affordability, reliability, and intelligent monitoring, the project creates a practical healthcare solution capable of improving patient safety and supporting overburdened medical staff in villages and underserved regions.</p>
+            <p>This project represents a step toward smarter, safer, and more accessible healthcare for rural India.</p>
+
+            <p class="story-cta"><a class="button primary cta-button" href="index.html#contact">Partner / Invest in SWA</a></p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
