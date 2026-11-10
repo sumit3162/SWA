@@ -135,7 +135,7 @@ This is a research prototype. It has not been clinically validated or certified 
 
 ## License
 
-Not chosen yet.
+Licensed under the [Apache License, Version 2.0](LICENSE).
 
 ## Author
 
