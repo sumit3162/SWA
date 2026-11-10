@@ -59,7 +59,7 @@ Hub: one ESP32-S3-BOX-3.
 
 ![node wiring](docs/images/node_wiring.png)
 
-One thing I got wrong in the first draft: the AMS1117 drops about 1.1 V, so with a 3.7 V cell it can't give a proper 3.3 V. Use a low-dropout part (HT7333, AP2112K, MCP1700). More detail in [docs/hardware.md](docs/hardware.md).
+Note: the AMS1117 listed in the paper drops about 1.1 V, so with a 3.7 V cell it can't give a proper 3.3 V. Use a low-dropout part (HT7333, AP2112K, MCP1700). More detail in [docs/hardware.md](docs/hardware.md).
 
 ![cost](docs/images/cost.png)
 
