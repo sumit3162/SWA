@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ward monitor</title>
+<style>
+  body { margin: 0; font-family: sans-serif; background: #12151a; color: #eee; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: #1b2028; }
+  h1 { font-size: 18px; margin: 0; font-weight: 600; }
+  #conn { font-size: 13px; color: #999; }
+  button { background: #2c7be5; color: #fff; border: 0; padding: 8px 14px; border-radius: 4px; font-size: 14px; }
+  #grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; padding: 12px; }
+  .card { background: #1b2028; border-radius: 6px; padding: 10px; border-left: 6px solid #3a3f47; }
+  .card.v1 { border-color: #2fb344; }
+  .card.v2 { border-color: #f5b800; }
+  .card.v3 { border-color: #e03131; background: #2b1a1c; }
+  .card.v4, .card.v5 { border-color: #6c7480; }
+  .bed { font-size: 13px; color: #aaa; }
+  .big { font-size: 30px; font-weight: 600; }
+  .row { display: flex; gap: 14px; align-items: baseline; }
+  .small { font-size: 12px; color: #999; margin-top: 4px; }
+  .tag { font-size: 12px; font-weight: 700; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Smart Ward Assistant</h1>
+  <span id="conn">connecting...</span>
+  <button onclick="ack()">Acknowledge</button>
+</header>
+<div id="grid"></div>
+
+<script>
+var names = ["", "OK", "WARNING", "CRITICAL", "SENSOR OFF", "NODE LOST"];
+var sock;
+var lastMsg = 0;
+
+function connect() {
+  sock = new WebSocket("ws://" + location.host + "/ws");
+  sock.onopen = function () { document.getElementById("conn").textContent = "live"; };
+  sock.onclose = function () {
+    document.getElementById("conn").textContent = "disconnected, retrying";
+    setTimeout(connect, 2000);
+  };
+  sock.onmessage = function (e) {
+    lastMsg = Date.now();
+    draw(JSON.parse(e.data));
+  };
+}
+
+function ack() {
+  if (sock && sock.readyState == 1) sock.send("ack");
+}
+
+function draw(d) {
+  // worst first
+  var beds = d.beds.slice().sort(function (a, b) {
+    var ra = a.v == 3 ? 3 : a.v == 2 ? 2 : a.v == 5 ? 2 : 0;
+    var rb = b.v == 3 ? 3 : b.v == 2 ? 2 : b.v == 5 ? 2 : 0;
+    if (ra != rb) return rb - ra;
+    return b.score - a.score;
+  });
+
+  var html = "";
+  beds.forEach(function (b) {
+    html += '<div class="card v' + b.v + '">' +
+      '<div class="bed">Bed ' + b.id + '</div>' +
+      '<div class="row"><span class="big">' + (b.hr || "--") + '</span><span class="small">bpm</span></div>' +
+      '<div class="row"><span class="big">' + (b.spo2 || "--") + '</span><span class="small">% SpO2</span></div>' +
+      '<div class="tag">' + names[b.v] + (b.ack ? " (ack)" : "") + '</div>' +
+      '<div class="small">risk ' + b.score.toFixed(1) + ' &middot; batt ' + b.bat + '%</div>' +
+      '</div>';
+  });
+  document.getElementById("grid").innerHTML = html || "<p style='padding:12px'>no nodes yet</p>";
+}
+
+connect();
+</script>
+</body>
+</html>
