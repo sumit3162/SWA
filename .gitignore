@@ -1,0 +1,6 @@
+.pio/
+.vscode/
+firmware/test/test_core
+__pycache__/
+*.pyc
+*.mp3

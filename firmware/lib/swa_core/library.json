@@ -1,0 +1,6 @@
+{
+  "name": "swa_core",
+  "version": "0.1.0",
+  "description": "packet format, ppg dsp and risk score used by both node and hub",
+  "build": { "flags": "-std=gnu++17" }
+}
